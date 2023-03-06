@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #ball {
+            /* Visuals */
+            background: red;
+            height: 40px;
+            width: 40px;
+            border-radius: 40px;
+            /*Movement*/
+            position: absolute;
+            transform: translate(-50%,-100%);
+        }
+
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="SetZeroPosition()">Reset Position</button>
+    <button onclick="simulate = !simulate; this.innerHTML = simulate ? 'Pause' : 'Play'" id="pauseplay">Play</button>
+    <div id=output>
+
+    </div>
+    <div id=ball></div>
+    <svg id="svg"></svg>
+    <script src=script.js type=module></script>
+</body>
+</html>
