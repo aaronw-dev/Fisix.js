@@ -6,7 +6,7 @@
   border-radius: 40px;
   /*Movement*/
   position: absolute;
-  transform: translate(-50%,-100%);
+  transform: translate(-50%,-50%);
 }
 
 body {

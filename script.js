@@ -72,10 +72,10 @@ class FourPointShape {
     this.bottomRight = bottomRight;
     this.color = color;
 
-    var topLine = new CollisionLine(new Vector2(topLeft[0], topLeft[1]), new Vector2(topRight[0], topRight[1]))
-    var rightLine = new CollisionLine(new Vector2(topRight[0], topRight[1]), new Vector2(bottomRight[0], bottomRight[1]))
-    var bottomLine = new CollisionLine(new Vector2(bottomRight[0], bottomRight[1]), new Vector2(bottomLeft[0], bottomLeft[1]))
-    var leftLine = new CollisionLine(new Vector2(bottomLeft[0], bottomLeft[1]), new Vector2(topLeft[0], topLeft[1]))
+    this.topLine = new CollisionLine(new Vector2(topLeft[0], topLeft[1]), new Vector2(topRight[0], topRight[1]))
+    this.rightLine = new CollisionLine(new Vector2(topRight[0], topRight[1]), new Vector2(bottomRight[0], bottomRight[1]))
+    this.bottomLine = new CollisionLine(new Vector2(bottomRight[0], bottomRight[1]), new Vector2(bottomLeft[0], bottomLeft[1]))
+    this.leftLine = new CollisionLine(new Vector2(bottomLeft[0], bottomLeft[1]), new Vector2(topLeft[0], topLeft[1]))
   }
 }
 
@@ -104,7 +104,9 @@ function TickGravity() {
   }
 }
 
-function TickCollision(shape) {}
+function TickCollision(shape) {
+  
+}
 
 function UpdateVisuals() {
   ball.style.top = positionY + "px";
@@ -119,10 +121,12 @@ function SetZeroPosition() {
 }
 
 document.onclick = (e) => {
-  velocityY = 0;
-  velocityX = 0;
-  positionY = e.y;
-  positionX = e.x;
+  if (!(e.target.tagName == "BUTTON")) {
+    velocityY = 0;
+    velocityX = 0;
+    positionY = e.y;
+    positionX = e.x;
+  }
 };
 
 function LogOut(output, delay = 100) {
