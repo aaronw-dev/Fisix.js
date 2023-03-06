@@ -1,3 +1,4 @@
+![image](/logo/logo-white.png) 
 # Spring Simulation
 A vanilla JavaScript-based spring simulation. Change parameters in ```script.js```. Will implement a GUI soon.
 
