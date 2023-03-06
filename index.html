@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        #ball {
-            /* Visuals */
-            background: red;
-            height: 40px;
-            width: 40px;
-            border-radius: 40px;
-            /*Movement*/
-            position: absolute;
-            transform: translate(-50%,-100%);
-        }
-
-        body {
-            overflow: hidden;
-        }
-    </style>
+    <link rel=stylesheet href=style.css>
 </head>
 <body>
     <button onclick="SetZeroPosition()">Reset Position</button>
@@ -25,7 +10,7 @@
 
     </div>
     <div id=ball></div>
-    <svg id="svg"></svg>
-    <script src=script.js type=module></script>
+    <canvas id=canvas></canvas>
+    <script src=script.js></script>
 </body>
 </html>
