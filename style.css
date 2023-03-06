@@ -1,0 +1,14 @@
+#ball {
+  /* Visuals */
+  background: red;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  /*Movement*/
+  position: absolute;
+  transform: translate(-50%,-100%);
+}
+
+body {
+  overflow: hidden;
+}
