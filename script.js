@@ -45,7 +45,9 @@ class Polygon{
   }
 }
 function InitMassPoint(positionX,positionY,bounce = 1,mass=1){
-  massPoints.push(new MassPoint(positionX, positionY, bounce,mass));
+  var point = new MassPoint(positionX, positionY, bounce,mass)
+  massPoints.push(point);
+  return point
 }
 
 function InitPolygon(points,width=2){
@@ -78,15 +80,26 @@ function TickGravity(){
     
     massPoints[i].positionX -= massPoints[i].velocityX;
     massPoints[i].positionY -= massPoints[i].velocityY;
-    var isIntersecting = pointInPolygon([[10,700],[140,700],[140,760],[10,760]], [massPoints[i].positionX, massPoints[i].positionY]);
+    var isIntersecting = pointInPolygon(collisionPolys[0].points, [massPoints[i].positionX, massPoints[i].positionY])
     if(isIntersecting){
-      
+      /*Calculate reflections
+        Reflection in a nutshell:
+        w = v - 2 * (v ∙ n) * n
+        or
+        reflected vector = input vector - 2 * (input vector * normal) * normal
+      */
+      //var velocityVector = [masspoints[i].velocityX,masspoints[i].velocityY]
+      //var reflectedVector = velocityVector - 2 * (velocityVector * normalVector) * normalVector
       massPoints[i].velocityY = -massPoints[i].velocityY * point.bounce;
       massPoints[i].positionY = 700;
     }
     
     DisplayMassPoints();
   }
+}
+
+function GetNormal(point1, point2){
+  
 }
 
 function DrawPolygon(points, width = 1, color = "#000000"){
@@ -105,7 +118,6 @@ function DrawPolygon(points, width = 1, color = "#000000"){
 function DrawLine(points, width = 1, color = "#000000"){
   linectx.lineWidth = width;
   linectx.beginPath();
-  console.log(points);
   linectx.moveTo(points[0][0], points[0][1]);
   for(let i = 1; i < points.length; i++){
     linectx.lineTo(points[i][0],points[i][1]);
@@ -137,9 +149,16 @@ const pointInPolygon = function(polygon, point) {
   return odd;
 };
 
-InitMassPoint(20,0,0.9);
+InitMassPoint(20,0,0.3);
 InitMassPoint(70,100,0.2);
-InitMassPoint(120,50,0.95);
-InitPolygon([[10,700],[140,700],[140,760],[10,760]]);
+InitMassPoint(120,50,0.4);
+InitPolygon([[10,700],[600,700],[600,760],[10,760]]);
 
+document.onclick=(e)=>{
+  InitMassPoint(e.x,e.y,0.5)
+}
+function UpdateCounters(){
+  document.getElementById('numballs').innerHTML = massPoints.length.toString()
+}
 setInterval(TickGravity,10);
+setInterval(UpdateCounters,100);
