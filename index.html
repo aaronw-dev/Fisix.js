@@ -2,16 +2,14 @@
 <html>
 <head>
   <link rel=stylesheet href=style.css>
-  <title>Fisix.js Demo</title>
+  <title>Spring Mass Model</title>
 </head>
 <body>
-  <button onclick="SetZeroPosition()">Reset Position</button>
-  <button onclick="simulate = !simulate; this.innerHTML = simulate ? 'Pause' : 'Play'" id="pauseplay">Play</button>
-  <div id=output>
-
+  <div id=masspoints>
+    
   </div>
-  <div id=ball></div>
   <canvas id=canvas></canvas>
+  <canvas id=linecanvas></canvas>
   <script src=script.js></script>
 </body>
 </html>
