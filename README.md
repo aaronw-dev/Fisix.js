@@ -7,4 +7,4 @@ A vanilla JavaScript-based spring simulation. Change parameters in <code>script.
 - [ ] Implement "closest point on polygon" algorithm
 
 ## Development Log
-**3/8/2023:** Rewrote physics engine using a [physics theory video by Gonkee](https://external.ink?to=/youtu.be/kyQP4t_wOGI)
+**3/8/2023:** Rewrote physics engine using a [physics theory video by Gonkee](youtu.be/kyQP4t_wOGI)
