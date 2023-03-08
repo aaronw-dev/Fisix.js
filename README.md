@@ -4,3 +4,6 @@ A vanilla JavaScript-based spring simulation. Change parameters in <code>script.
 ## To Do
 - [ ] Add velocity reflection on contact
 - [ ] Implement "closest point on polygon" algorithm
+
+##Development Log
+**3/8/2023:** Rewrote physics engine using a [physics theory video by Gonkee](https://youtu.be/kyQP4t_wOGI)
