@@ -12,5 +12,5 @@ A vanilla JavaScript-based spring simulation. Change parameters in ```script.js`
 - [ ] Implement "closest point on polygon" algorithm
 
 ## Development Log
-**3/8/2023 11:20AM** Rewrote physics engine using a [physics theory video by Gonkee](youtu.be/kyQP4t_wOGI)
+**3/8/2023 11:20AM** Rewrote physics engine using a [physics theory video by Gonkee](youtu.be/kyQP4t_wOGI)  
 **3/9/2022 1:30PM** Added functionality to draw lines between balls
