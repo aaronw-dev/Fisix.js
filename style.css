@@ -13,11 +13,17 @@ body{
   font-family:sans-serif;
   font-size: 30px;
   font-weight: bolder;
+  overflow:hidden;
 }
 
 #canvas,#linecanvas{
   position:fixed;
 }
 #ballcount{
+  left:0;
   position:fixed;
+}
+#fpscount{
+  position:fixed;
+  right:0;
 }

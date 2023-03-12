@@ -1,5 +1,5 @@
 <base target="_blank">
-<h1><img src=/logo/logo-white.png height=40px style="vertical-align:text-top">Fisix.js</h1>
+<h1><img src=/logo/logo-white.png height=40px style="vertical-align:text-top">Beam Physics Engine</h1>
 
 A vanilla JavaScript-based spring simulation. Change parameters in ```script.js```. Will implement a GUI soon.
 
@@ -13,4 +13,6 @@ A vanilla JavaScript-based spring simulation. Change parameters in ```script.js`
 
 ## Development Log
 **3/8/2023 11:20AM** Rewrote physics engine using a [physics theory video by Gonkee](youtu.be/kyQP4t_wOGI)  
-**3/9/2022 1:30PM** Added functionality to draw lines between balls
+**3/9/2022 1:30PM** Added functionality to draw lines between balls  
+**3/10/2022 12:40PM** Implemented basic collision functions  
+**3/11/2022 10:19PM** Finished implementing collision, need to implement spring systems.
