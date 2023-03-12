@@ -8,8 +8,9 @@ A vanilla JavaScript-based spring simulation. Change parameters in ```script.js`
 - [Shortest distance between a point and a line segment](https://stackoverflow.com/questions/849211/shortest-distance-between-a-point-and-a-line-segment)
 
 ## To Do
-- [ ] Add velocity reflection on contact
-- [ ] Implement "closest point on polygon" algorithm
+- [x] Add velocity reflection on contact
+- [x] Implement "closest point on polygon" algorithm
+- [ ] Implement spring algorithm
 
 ## Development Log
 **3/8/2023 11:20AM** Rewrote physics engine using a [physics theory video by Gonkee](youtu.be/kyQP4t_wOGI)  
